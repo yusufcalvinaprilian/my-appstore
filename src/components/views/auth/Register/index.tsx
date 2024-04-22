@@ -1,16 +1,16 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "./Register.module.scss";
-import { FormEvent, FormHTMLAttributes, useState } from "react";
+import { FormEvent, useState } from "react";
 
 const RegisterView = () => {
 	const [isLoading, setIsLoading] = useState(false);
-	const [error, setError] = useState('');
+	const [error, setError] = useState("");
 	const router = useRouter();
 	const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		setIsLoading(true);
-		setError('');
+		setError("");
 		const form = event.target as HTMLFormElement;
 
 		const data = {
